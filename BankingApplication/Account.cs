@@ -170,17 +170,18 @@ namespace BankingApplication
     ///<summary>
     /// This class models checking account whose parent is account/// </summary>
     {
-        public decimal _accountServiceFee;
+        public decimal _accountServiceFee = 5m;
         public CheckingAccount()
         {
         }
-        public void AccountNumber()
+        public string AccountNumber()
         /// <summary>
         /// Purpose: set the account number depending on this account type
         {
 
             incAccNum = incAccNum + 1;
             accountNumber = incAccNum.ToString()+ "C";
+            return accountNumber;
         }
         public decimal accountServiceFee
         /// <summary>
@@ -201,9 +202,10 @@ namespace BankingApplication
         /// Returns: true or false
 
         {
-            if (inBalance < 10) {
-                Console.WriteLine("Starting Balance must be at least $500, please try again.");
-                return false; }
+            if (inBalance < 100) {
+                Console.WriteLine("Starting Balance must be at least $100, please try again.");
+                return false; 
+            }
             balance = inBalance;
             return true;
         }
@@ -213,13 +215,19 @@ namespace BankingApplication
     /// This class models a savings account whose parent is the account class/// </summary>
     {
         public decimal _accountServiceFee;
-   
-        public void AccountNumber()
+        const decimal interest = 1.01m;
+        
+        public decimal getInterest()
+        {
+            return interest;
+        }
+        public string AccountNumber()
         /// <summary>
         /// Purpose: set the account number depending on this account type
         {
             incAccNum = incAccNum + 1;
             accountNumber = incAccNum.ToString() + "S";
+            return accountNumber;
         }
         public decimal accountServiceFee
         /// <summary>
@@ -255,12 +263,13 @@ namespace BankingApplication
     {
         public decimal _accountServiceFee;
 
-        public void AccountNumber()
+        public string AccountNumber()
         /// <summary>
         /// Purpose: set the account number depending on this account type
         {
             incAccNum = incAccNum + 1;
             accountNumber = incAccNum.ToString() + "D";
+            return accountNumber;
         }
         public decimal accountServiceFee
         /// <summary>
@@ -289,77 +298,5 @@ namespace BankingApplication
             return true;
         }
     }
-    internal class AccountManager
-    ///<summary>
-    /// This class models a account manager. Its used to store the accounts/// </summary>
-    {
-        public static int accountCount = 0;
-        Account[] accounts;
-
-        public AccountManager()
-        {
-
-        }
-        public void SetArrayLength(int size) {
-            /// <summary>
-            /// Purpose: helper method to set array size
-            /// parameters: size its to be
-            accounts = new Account[size];
-        }
-        public bool StoreAccount(Account inAccount) {
-            /// <summary>
-            /// Purpose: stores the account in a array within accountmanager
-            /// parameters: a created account
-            /// Returns: true or false
-            if (inAccount == null) {
-                Console.WriteLine("Object is null, please fix and try again\n");
-                return false;
-            }
-            else if(accounts.Length == accountCount) {
-                Console.WriteLine("Array is full cannot add anymore accounts.\n");
-                return false;
-            }
-            else
-            {
-                accounts[accountCount] = inAccount;
-                accountCount++;
-                return true;
-            }
-        }
-        public Account FindAccount(string inAccountNumber)
-        /// <summary>
-        /// Purpose: searches for a account and returns it if found
-        /// parameters: a account number
-        /// Returns: the account thats found
-        {
-            for (int i = 0; i < accounts.Length;i++)
-            {
-                if (accounts[i].accountNumber == inAccountNumber)
-                {
-                    return accounts[i];
-                }
-            }
-            return null;
-
-        }
-
-        public override string ToString()
-        /// <summary>
-        /// Purpose: to print out the array of accounts and their info
-        /// Returns: a string of detailed account info
-        {
-            string tempReturn = "";
-            for(int i = 0; i <accounts.Length;i++)
-            {
-                tempReturn = tempReturn + "Name: " + accounts[i].name + "\n" +
-                    "Address: " + accounts[i].address + "\n" +
-                    "Account Number: " + accounts[i].accountNumber + "\n" +
-                    "Balance: " + accounts[i].balance + "\n\n";
-                    
-            }
-            return tempReturn;
-                
-        }
-
-    }
+    
 }

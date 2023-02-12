@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\Documents\\2023 School\\CS 3260 - CsharpNET Software Development\\Code\\BankingApplication\\BankingApplication\\BankingApplication.csproj": {}
+    "C:\\Users\\andre\\Documents\\2023 School\\CS 3260 - CsharpNET Software Development\\Code\\BankingApplicationPhase3\\BankingApplication\\BankingApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\Documents\\2023 School\\CS 3260 - CsharpNET Software Development\\Code\\BankingApplication\\BankingApplication\\BankingApplication.csproj": {
+    "C:\\Users\\andre\\Documents\\2023 School\\CS 3260 - CsharpNET Software Development\\Code\\BankingApplicationPhase3\\BankingApplication\\BankingApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Documents\\2023 School\\CS 3260 - CsharpNET Software Development\\Code\\BankingApplication\\BankingApplication\\BankingApplication.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\Documents\\2023 School\\CS 3260 - CsharpNET Software Development\\Code\\BankingApplicationPhase3\\BankingApplication\\BankingApplication.csproj",
         "projectName": "BankingApplication",
-        "projectPath": "C:\\Users\\andre\\Documents\\2023 School\\CS 3260 - CsharpNET Software Development\\Code\\BankingApplication\\BankingApplication\\BankingApplication.csproj",
+        "projectPath": "C:\\Users\\andre\\Documents\\2023 School\\CS 3260 - CsharpNET Software Development\\Code\\BankingApplicationPhase3\\BankingApplication\\BankingApplication.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Documents\\2023 School\\CS 3260 - CsharpNET Software Development\\Code\\BankingApplication\\BankingApplication\\obj\\",
+        "outputPath": "C:\\Users\\andre\\Documents\\2023 School\\CS 3260 - CsharpNET Software Development\\Code\\BankingApplicationPhase3\\BankingApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
